@@ -1,0 +1,73 @@
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row class="header">
+    <img src="../../../assets/images/nombre.png" alt="">
+    <span class="spacer"></span>
+    <mat-icon>account_circle</mat-icon><span>Registrarme</span>|<span>Ingresar</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row style="height: 30px;">
+    <span class="spacer"></span>
+    <img style="width: 150px;" src="../../../assets/images/arrobaredes.png" alt="">
+  </mat-toolbar-row>
+  <mat-toolbar-row class="sosial">
+    <span class="spacer"></span>
+    <div>
+      <mat-icon (click)="facebook()" style="color: rgba(20, 52, 148, 0.864)">facebook</mat-icon>
+      <mat-icon (click)="youtube()" style="color: rgba(238, 20, 20, 0.864);">play_circle_filled</mat-icon>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="menu">
+    <mat-icon>play_arrow</mat-icon><span style="cursor: pointer;" (click)="onClickQS()">¿Quieres Somos?</span>
+    <span class="spacer"></span>
+    <mat-icon>play_arrow</mat-icon><span  style="cursor: pointer;" (click)="onClickCatalogo()">Catálogo de Materiales</span>
+    <img style="width: 220px; margin-left: 40px;" src="../../../assets/images/barraseguridad.png" alt="">
+  </mat-toolbar-row>
+</mat-toolbar>
+<img class="logo" src="../../../assets/images/personaje.png" alt="">
+<img (click)="onClickEmergencia()" class="emergencia" src="../../../assets/images/emergencias.png" alt="">
+<div fxLayout="row" fxLayoutAlign="start center" style="margin-left: 20px;">
+  <div fxFlex="200px">
+    <mat-card class="cardm" (click)="onClickServicio()">
+      <img mat-card-image src="../../../assets/images/cajaherramientas.png" alt="">
+      <mat-card-content>Nuevos Servicios</mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="200px">
+    <mat-card class="cardm">
+      <img mat-card-image src="../../../assets/images/casco.png" alt="">
+      <mat-card-content>Trabaja Con Nosotros</mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="200px">
+    <mat-card class="cardm">
+      <img mat-card-image src="../../../assets/images/calculadora.png" alt="">
+      <mat-card-content>Cotizaciones</mat-card-content>
+    </mat-card> 
+  </div>
+  <div fxFlex="calc(100% - 600px)">
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <mat-card class="card-chat">
+        <img mat-card-image src="../../../assets/images/chatfontanero.png" alt="">
+        <mat-card-content>
+          <input class="form-control"  placeholder="Realiza tus consultas" type="text">
+        </mat-card-content>
+      </mat-card> 
+    </div>
+  </div>
+</div>
+<div fxLayout="row" class="body">
+  <app-quienes-somos *ngIf="quienesSomos"></app-quienes-somos>
+  <app-catalogo-material *ngIf="catalogo"></app-catalogo-material>
+  <app-nuestro-servicio *ngIf="servicio"></app-nuestro-servicio>
+  <app-emergencia *ngIf="emergencia"></app-emergencia>
+</div>
+<div class="before-footer">
+  Plomeros | Electricistas | Albañiles | Carpinteros | Pintores | Mecánicos
+</div>
+<div class="footer">
+  <img class="img" src="../../../assets/images/contactanos.jpg" alt="">
+  <img class="img" src="../../../assets/images/telefono.jpg" alt="">
+  <img class="img" src="../../../assets/images/correo.jpg" alt="">
+  <img class="img" src="../../../assets/images/direccion.jpg" alt="">
+  <img class="img" src="../../../assets/images/compartirweb.jpg" alt="">
+  <img class="descarga" mat-card-image src="../../../assets/images/descargaapp.png" alt="">
+</div>
