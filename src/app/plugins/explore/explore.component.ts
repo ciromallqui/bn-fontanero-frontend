@@ -14,6 +14,9 @@ export class ExploreComponent implements OnInit {
   catalogo: boolean;
   servicio: boolean;
   emergencia: boolean;
+  cotizacion: boolean;
+
+  casco: boolean = true;
 
   ngOnInit() {
     console.log(screen.width);
@@ -53,5 +56,10 @@ export class ExploreComponent implements OnInit {
     this.catalogo = false;
     this.servicio = false;
     this.emergencia = true
+  }
+
+  onClickIngresar(){
+    this.casco = false;
+    this.cotizacion = true;
   }
 }

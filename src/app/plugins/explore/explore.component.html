@@ -2,7 +2,7 @@
   <mat-toolbar-row class="header">
     <img src="../../../assets/images/nombre.png" alt="">
     <span class="spacer"></span>
-    <mat-icon>account_circle</mat-icon><span>Registrarme</span>|<span>Ingresar</span>
+    <mat-icon>account_circle</mat-icon><span>Registrarme</span>|<span style="cursor: pointer;" (click)="onClickIngresar()">Ingresar</span>
   </mat-toolbar-row>
   <mat-toolbar-row style="height: 30px;">
     <span class="spacer"></span>
@@ -31,13 +31,13 @@
       <mat-card-content>Nuevos Servicios</mat-card-content>
     </mat-card>
   </div>
-  <div fxFlex="200px">
+  <div fxFlex="200px" *ngIf="casco">
     <mat-card class="cardm">
       <img mat-card-image src="../../../assets/images/casco.png" alt="">
       <mat-card-content>Trabaja Con Nosotros</mat-card-content>
     </mat-card>
   </div>
-  <div fxFlex="200px">
+  <div fxFlex="200px" *ngIf="cotizacion">
     <mat-card class="cardm">
       <img mat-card-image src="../../../assets/images/calculadora.png" alt="">
       <mat-card-content>Cotizaciones</mat-card-content>
