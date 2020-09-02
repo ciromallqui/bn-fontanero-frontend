@@ -1,13 +1,40 @@
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
     .toolbar{
         display: none;
     }
+} */
+.fontanero{
+    overflow: auto;
+    height: calc(100% - 160px);
 }
 .emergencia{
-    position: fixed;
     width: 160px;
-    left: calc(50% - 70px);
-    top: 380px;
+    margin-top: 20px;
+    margin-right: 150px;
+}
+.servicio{
+    color: rgb(28, 130, 233);
+    font-size: 40px;
+    font-weight: bold;
+}
+.info{
+    margin-left: 60px;
+    margin-top: 270px;
+}
+.info .caja{
+    width: 150px;
+    position: relative;
+    top: 80px;
+    z-index: 1000;
+}
+.head-body{
+    height: 60px;
+    background-color: rgb(238, 238, 236);
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(9, 111, 236);
+    margin-left: 20px
 }
 body{
     background-color: rgb(117, 197, 240);
@@ -15,77 +42,53 @@ body{
 }
 .toolbar{
     background-color: rgb(238, 238, 236);
+    position: fixed;
+    height: 270px;
 }
 .spacer {
     flex: 1 1 auto;
 }
 .toolbar .header{
-    height: 100px;
+    height: 220px;
 }
 .header img{
-    width: 500px;
+    width: 440px;
     display: flex;
-    margin-top: 105px;
+    margin-top: 50px;
     margin-left: 40px;
 }
-.header span{
-    margin-left: 5px;
-    margin-right: 5px;
-    font-family: Cambpria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 18px;
-    font-weight: bold;
-}
-.sosial mat-icon{
-    font-size: 40px;
-    cursor: pointer;
-    margin-right: 20px;
-}
-.sosial div{
-    height: 45px;
-    width: 100px;
-    padding-top: 3px;
-    padding-left: 10px;
-    background-color: #FFF;
-    border-radius: 50px;
-}
 .logo{
-    width: 300px;
+    width: 280px;
     display: flex;
     position: absolute;
-    margin-top: -180px;
+    margin-top: 50px;
     margin-left: calc(50% - 150px) ;
 }
 .menu{
     width: 100%;
     height: 50px;
-    padding-left: 50px;
     background-color: rgb(0, 124, 195);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #FFF;
 }
-.cardm, .card-chat{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    margin-top: 10px;
+.menu mat-icon{
+    margin-left: 40px;
 }
 .cardm img{
     width: 100px; 
-    margin: auto; 
+    margin-left: 20px; 
     display: flex;
 }
 .cardm mat-card-content{
     text-align: center;
-    width: 100px;
+    width: 130px;
     margin: auto; 
     display: flex; 
     margin-top: 10px; 
     border-radius: 10px; 
     padding: 3px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #FFF;
 }
@@ -100,64 +103,55 @@ body{
     left: -30px;
     content: ' ';
     background-color: rgba(255, 255, 255, 0.313);
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
+    width: 240px;
+    height: 240px;
+    border-radius: 120px;
     display: flex;
-}
-.card-chat{
-    margin-right: 20px;
-    z-index: 4000;
-}
-.card-chat mat-card-content{
-    position: absolute;
-    display: flex;
-    margin: -90px 0 0 -300px;
-    width: 300px;
-}
-
-.card-chat input{
-    border-radius: 20px; 
-    background-color: #e6e6e6;
 }
 .body{
-    background: #FFF;
-    margin-top: 50px;
-    width: calc(100% - 20px);
-    height: calc(100% - 580px);
-    overflow: auto;
-    overflow-x: hidden;
-    padding: 10px;
-    position: fixed;
+    background-color: rgb(238, 238, 236);
+    width: 100%;
 }
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 150px;
+    padding-left: 20px;
     background-color: rgb(238, 238, 236);
-    color: rgb(0, 124, 195);
-    text-align: center;
+    z-index: 1000;
 }
 .footer .descarga{
     position: fixed;
-    width: 150px;
-    right: 50px;
-    bottom: 20px;
+    width: 170px;
+    right: 100px;
+    bottom: 5px;
 }
-.footer .img{
-    margin-left: 20px;
-    height: 20px;
-    margin-top: 20px;
+
+.bn-card{
+    height: 165px;
 }
-.before-footer{
-    width: 100%;
-    position: fixed;
-    bottom: 100px;
-    font-size: 20px;
-    color: #FFF;
+.bn-card img{
+    width: 120px;
+    float: right;
+    margin-top: -40px;
+}
+.linea{
+    width: calc(100% - 60px);
+    height: 3px;
+    border-radius: 2px;
+    background: #FFF;
+}
+.linea p{
+    padding-top: 10px;
+}
+.titulo{
+    font-size: 26px;
     font-weight: bold;
-    margin: auto;
-    text-align: center;
+}
+.registro{
+    background-color: rgb(70, 171, 226);
+    margin-right: 10px;
+    padding-bottom: 10px;
 }

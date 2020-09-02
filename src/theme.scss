@@ -1,0 +1,535 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config($font-family: 'Poppins', $headline: mat-typography-level(32px, 48px, 700), $body-1: mat-typography-level(16px, 24px, 500));
+@include angular-material-typography($custom-typography);
+@include mat-core($custom-typography);
+
+//mat-palette, recibe tres parametros
+//La asignacion de colores por defetco de los parametros del metodo mat-palette son: $default: 500, $lighter: 100, $darker: 700.
+$oefa-color-xs: (50 : #e0f2fc, 100 : #b3def8, 200 : #80c8f3, 300 : #4db1ee, 400 : #26a1eb, 500 : #0090e7, 600 : #0088e4, 700 : #007de0, 800 : #0073dd, 900 : #0061d7, A100 : #fefeff, A200 : #cbdfff, A400 : #98c0ff, A700 : #7fb0ff, contrast: (50 : #000000, 100 : #000000, 200 : #000000, 300 : #000000, 400 : #000000, 500 : #ffffff, 600 : #ffffff, 700 : #ffffff, 800 : #ffffff, 900 : #ffffff, A100 : #000000, A200 : #000000, A400 : #000000, A700 : #000000, ));
+$oefa-color-a: (50: #e3e9f4, 100: #b9c9e5, 200: #8aa5d3, 300: #5b80c1, 400: #3765b4, 500: #144aa7, 600: #12439f, 700: #0e3a96, 800: #0b328c, 900: #06227c, A100: #aabaff, A200: #7790ff, A400: #4466ff, A700: #2b52ff, contrast: (50: #000000, 100: #000000, 200: #000000, 300: #ffffff, 400: #ffffff, 500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff, A100: #000000, A200: #000000, A400: #ffffff, A700: #ffffff));
+$oefa-color-b: (50: #e4f0f7, 100: #bbdaec, 200: #8ec2df, 300: #61aad2, 400: #3f97c9, 500: #1d85bf, 600: #1a7db9, 700: #1572b1, 800: #1168a9, 900: #0a559b, A100: #c9e2ff, A200: #96c7ff, A400: #63acff, A700: #499fff, contrast: (50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff, A100: #000000, A200: #000000, A400: #000000, A700: #000000));
+$oefa-color-c: (50: #e2f8fb, 100: #b6eef6, 200: #85e3f0, 300: #54d8e9, 400: #30cfe5, 500: #0bc7e0, 600: #0ac1dc, 700: #08bad8, 800: #06b3d3, 900: #03a6cb, A100: #f3fdff, A200: #c0f2ff, A400: #8de7ff, A700: #74e2ff, contrast: (50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #000000, 600: #000000, 700: #000000, 800: #000000, 900: #ffffff, A100: #000000, A200: #000000, A400: #000000, A700: #000000));
+$oefa-color-d: (50: #e9f7f6, 100: #c7ece9, 200: #a2dfda, 300: #7cd2cb, 400: #60c9c0, 500: #44bfb5, 600: #3eb9ae, 700: #35b1a5, 800: #2da99d, 900: #1f9b8d, A100: #d5fffa, A200: #a2fff4, A400: #6fffee, A700: #56ffeb, contrast: (50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #000000, 600: #000000, 700: #000000, 800: #000000, 900: #ffffff, A100: #000000, A200: #000000, A400: #000000, A700: #000000));
+$oefa-color-e: (50: #f1f9e7, 100: #ddf0c4, 200: #c6e69d, 300: #afdc75, 400: #9dd558, 500: #8ccd3a, 600: #84c834, 700: #79c12c, 800: #6fba25, 900: #5cae18, A100: #efffe3, A200: #d1ffb0, A400: #b3ff7d, A700: #a4ff63, contrast: (50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #000000, 600: #000000, 700: #000000, 800: #000000, 900: #000000, A100: #000000, A200: #000000, A400: #000000, A700: #000000));
+$oefa-color-f: (50: #ededed, 100: #d2d2d2, 200: #b4b5b5, 300: #969797, 400: #808080, 500: #696a6a, 600: #616262, 700: #565757, 800: #4c4d4d, 900: #3b3c3c, A100: #a0f5f5, A200: #72f0f0, A400: #30ffff, A700: #17ffff, contrast: (50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff, A100: #000000, A200: #000000, A400: #000000, A700: #000000));
+$oefa-app-primary: mat-palette($oefa-color-xs);
+$oefa-app-accent: mat-palette($oefa-color-b);
+$oefa-app-warn: mat-palette($oefa-color-e);
+$oefa-app-theme: mat-light-theme($oefa-app-primary, $oefa-app-accent, $oefa-app-warn);
+@include angular-material-theme($oefa-app-theme);
+
+.xs-tooltip {
+  background: mat-color($oefa-app-primary, 300) !important;
+}
+
+.xs-doc-completo-tooltip {
+  background: rgb(255, 65, 126);
+}
+
+/* ---------------------------------------
+  LISTADO
+------------------------------------------ */
+.mat-table tbody .mat-row:nth-child(even) {
+  background: mat-color($oefa-app-primary, 50) !important;
+}
+
+.mat-table tbody .mat-row:hover {
+  background-color: mat-color($oefa-app-primary, 400) !important;
+}
+
+.mat-table tbody .mat-row:hover .mat-cell {
+  color: white !important;
+
+  .mat-icon {
+    color: white !important;
+  }
+}
+
+/* ============================= GENERAL PURPOSES ============================= */
+/* ================================= PABLO ================================= */
+
+// Colors
+$xs-primary: rgb(0, 147, 237);
+// $xs-primary: #5a67d8;
+
+$xs-danger: #e53e3e;
+$xs-success: #38a169;
+$xs-warning: #dd6b20;
+$xs-info: #3182ce;
+
+.xs-color {
+  &-info {
+    color: $xs-info !important;
+  }
+
+  &-warning {
+    color: $xs-warning !important;
+  }
+
+  &-success {
+    color: $xs-success !important;
+  }
+
+  &-danger {
+    color: $xs-danger !important;
+  }
+}
+
+// Spaces
+$spaceamounts: (5, 10, 15, 20, 25, 30);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+// General
+.xs-subtitulo {
+  font-size: 14px;
+  color: $xs-primary;
+}
+
+.xs-plugin {
+  .xs-init-form {
+    height: 100%;
+    padding: 5px 10px;
+  }
+
+  .titulo {
+    font-weight: 400;
+    font-size: 18px !important;
+    background-color: $xs-primary;
+    color: white;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .listado .mat-table tbody {
+    .mat-row:nth-child(even) {
+      background: mat-color($oefa-app-primary, 50) !important;
+    }
+
+    .mat-row:hover {
+      background-color: mat-color($oefa-app-primary, 400) !important;
+    }
+
+    .mat-row:hover .mat-cell {
+      color: white !important;
+
+      .mat-icon {
+        color: white !important;
+      }
+    }
+
+    .mat-progress-spinner circle {
+      stroke: mat-color($oefa-app-primary, 400) !important;
+    }
+
+    .mat-sort-header-button {
+      margin: 0 auto !important;
+    }
+
+    .mat-sort-header-arrow {
+      color: white;
+    }
+  }
+}
+
+.p-archivo {
+  label {
+    font-size: 14px;
+  }
+
+  .body {
+    height: 45px;
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 30px;
+      margin-right: 5px;
+    }
+
+    input {
+      opacity: 0;
+      position: absolute;
+    }
+
+    small {
+      font-size: 10px !important;
+    }
+  }
+}
+
+.placeholder{
+  font-size: 12px;
+  font-weight: bold;
+}
+.es-requerido::after {
+  content: " *";
+  color: $xs-danger;
+}
+
+.mat-required {
+
+  .mat-select-placeholder::after,
+  .mat-form-field-label::after {
+    content: " *";
+    color: $xs-danger !important;
+    -webkit-text-fill-color: $xs-danger !important;
+  }
+}
+
+.es-requerido-text::after {
+  content: " * Campo Obligatorio";
+  color: $xs-danger;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.md-ripple-container:active {
+  background-color: rgb(230, 135, 80)
+}
+
+.extra-checkbox-label {
+  font-size: 11px;
+}
+
+.delete-file-icon {
+  font-size: 24px !important;
+  cursor: pointer;
+}
+
+.text {
+  &-center {
+    text-align: center !important;
+  }
+
+  &-right {
+    text-align: right !important;
+  }
+
+  &-left {
+    text-align: left !important;
+  }
+}
+
+.font {
+  &-10 {
+    font-size: 10px;
+  }
+
+  &-12 {
+    font-size: 12px;
+  }
+
+  &-14 {
+    font-size: 14px;
+  }
+}
+
+.text .p-cursor-pointer {
+  cursor: pointer;
+}
+
+// Vectors
+.file {
+  &-upload {
+    width: 18px;
+    height: 18px;
+    background: url(assets/vectors/file-upload-solid.svg);
+    background-repeat: no-repeat;
+
+    &-lg {
+      width: 30px;
+      height: 30px;
+      background: url(assets/vectors/file-upload-solid.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &-download {
+    width: 18px;
+    height: 18px;
+    background: url(assets/vectors/file-download-solid.svg);
+    background-repeat: no-repeat;
+  }
+
+}
+
+// Auto Size Dialog (Only Height)
+md-dialog-container {
+  height: auto !important;
+}
+
+.cdk-overlay-pane,
+.md-overlay-pane {
+  height: auto !important;
+}
+
+// .cdk-overlay-pane,
+// .md-overlay-pane {
+//   flex: 1 1 0;
+// }
+
+.descarga,
+.descarga-detalle {
+  text-decoration: none;
+  font-size: 11px;
+  color: #000;
+}
+
+.descarga:hover {
+  color: #FFF;
+}
+
+.descarga-detalle:hover {
+  color: rgb(76, 106, 236);
+}
+
+.nombreArchivo {
+  font-size: 13px !important;
+  font-weight: bold;
+}
+
+pagination-controls {
+  position: relative;
+  text-align: center;
+}
+
+// Pablo 07-10-19
+.xs-btn-add {
+  position: absolute;
+  float: right;
+  right: 35px;
+}
+
+.mat-option {
+  border-bottom: 1px solid #cbd5e0;
+}
+
+.mat-select-panel mat-option.mat-option {
+  height: unset;
+}
+
+.mat-option-text.mat-option-text {
+  white-space: normal;
+}
+
+.mat-table .mat-header-row .mat-header-cell {
+  color: white;
+  font-size: small;
+  text-align: center !important;
+}
+
+// Test purposes
+.mat-form-field-hide-placeholder .mat-select-placeholder {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.42) !important;
+}
+
+.download {
+  font-weight: bold;
+  text-align: center;
+
+  &-process {
+    margin: 0;
+    padding: 0;
+    color: $xs-info;
+    -webkit-animation: flash linear 1s infinite;
+    animation: flash linear 1s infinite;
+  }
+
+  &-success {
+    margin: 0;
+    padding: 0;
+    color: $xs-success;
+  }
+
+  &-error {
+    margin: 0;
+    padding: 0;
+    color: $xs-danger;
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.xs-input-descripcion {
+  margin-top: -15px;
+  display: block;
+  font-size: 12px;
+  color: $xs-danger;
+}
+
+// 2020 (Aleck)
+.dialog-close {
+  &-button {
+    float: right;
+    top: -24px;
+    right: -24px;
+  }
+
+  &-icon {
+    // color: $xs-danger;
+    transition: transform .8s ease-in-out;
+  }
+
+  &-icon:hover {
+    cursor: pointer;
+    transform: rotate(180deg);
+  }
+}
+
+.xs-bs {
+  &-cursor-pointer:hover {
+    cursor: pointer;
+  }
+}
+.xs-swal-container-left {
+  .swal2-html-container {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+// LOADERS
+// <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $xs-primary;
+  margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

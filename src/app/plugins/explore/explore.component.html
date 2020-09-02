@@ -1,73 +1,124 @@
-<mat-toolbar class="toolbar">
-  <mat-toolbar-row class="header">
-    <img src="../../../assets/images/nombre.png" alt="">
-    <span class="spacer"></span>
-    <mat-icon>account_circle</mat-icon><span>Registrarme</span>|<span style="cursor: pointer;" (click)="onClickIngresar()">Ingresar</span>
-  </mat-toolbar-row>
-  <mat-toolbar-row style="height: 30px;">
-    <span class="spacer"></span>
-    <img style="width: 150px;" src="../../../assets/images/arrobaredes.png" alt="">
-  </mat-toolbar-row>
-  <mat-toolbar-row class="sosial">
-    <span class="spacer"></span>
-    <div>
-      <mat-icon (click)="facebook()" style="color: rgba(20, 52, 148, 0.864)">facebook</mat-icon>
-      <mat-icon (click)="youtube()" style="color: rgba(238, 20, 20, 0.864);">play_circle_filled</mat-icon>
+<div class="fontanero">
+  <mat-toolbar class="toolbar">
+    <mat-toolbar-row class="header">
+      <img src="../../../assets/images/nombre.png" alt="">
+      <span class="spacer"></span>
+      <div><img src="../../../assets/images/pibli.jpg" alt=""></div>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="menu">
+      <mat-icon>play_arrow</mat-icon><span style="cursor: pointer;">Conócenos</span>
+      <mat-icon>play_arrow</mat-icon><span style="cursor: pointer;">Misión</span>
+      <mat-icon>play_arrow</mat-icon><span style="cursor: pointer;">Visión</span>
+      <mat-icon>play_arrow</mat-icon><span style="cursor: pointer;">Valores</span>
+      <span class="spacer"></span>
+      <mat-icon>play_arrow</mat-icon><span  style="cursor: pointer;" (click)="onClickCatalogo()">Catálogo de Materiales</span>
+      <img style="width: 220px; margin-left: 40px;" src="../../../assets/images/barraseguridad.png" alt="">
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <img class="logo" src="../../../assets/images/personaje.png" alt="">
+
+  <div fxLayout="row" fxLayoutAlign="start center" class="info">
+    <div fxFlex="50%">
+      <strong class="servicio">NUESTROS SERVICIOS</strong>
     </div>
-  </mat-toolbar-row>
-  <mat-toolbar-row class="menu">
-    <mat-icon>play_arrow</mat-icon><span style="cursor: pointer;" (click)="onClickQS()">¿Quieres Somos?</span>
-    <span class="spacer"></span>
-    <mat-icon>play_arrow</mat-icon><span  style="cursor: pointer;" (click)="onClickCatalogo()">Catálogo de Materiales</span>
-    <img style="width: 220px; margin-left: 40px;" src="../../../assets/images/barraseguridad.png" alt="">
-  </mat-toolbar-row>
-</mat-toolbar>
-<img class="logo" src="../../../assets/images/personaje.png" alt="">
-<img (click)="onClickEmergencia()" class="emergencia" src="../../../assets/images/emergencias.png" alt="">
-<div fxLayout="row" fxLayoutAlign="start center" style="margin-left: 20px;">
-  <div fxFlex="200px">
-    <mat-card class="cardm" (click)="onClickServicio()">
-      <img mat-card-image src="../../../assets/images/cajaherramientas.png" alt="">
-      <mat-card-content>Nuevos Servicios</mat-card-content>
-    </mat-card>
-  </div>
-  <div fxFlex="200px" *ngIf="casco">
-    <mat-card class="cardm">
-      <img mat-card-image src="../../../assets/images/casco.png" alt="">
-      <mat-card-content>Trabaja Con Nosotros</mat-card-content>
-    </mat-card>
-  </div>
-  <div fxFlex="200px" *ngIf="cotizacion">
-    <mat-card class="cardm">
-      <img mat-card-image src="../../../assets/images/calculadora.png" alt="">
-      <mat-card-content>Cotizaciones</mat-card-content>
-    </mat-card> 
-  </div>
-  <div fxFlex="calc(100% - 600px)">
-    <div fxLayout="row" fxLayoutAlign="end center">
-      <mat-card class="card-chat">
-        <img mat-card-image src="../../../assets/images/chatfontanero.png" alt="">
-        <mat-card-content>
-          <input class="form-control"  placeholder="Realiza tus consultas" type="text">
-        </mat-card-content>
-      </mat-card> 
+    <div fxFlex="120px">
+      <img mat-card-image class="caja" src="../../../assets/images/cajaherramientas.png" alt="">
+    </div>
+
+    <div fxFlex="50%">
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <mat-card class="emergencia">
+          <img mat-card-image (click)="onClickEmergencia()" src="../../../assets/images/emergencias.png" alt="">
+          <mat-card-content>
+          </mat-card-content>
+        </mat-card> 
+      </div>
     </div>
   </div>
+  <div fxLayout="row wrap" fxLayoutGap="30px">
+    <div fxFlex="calc(70% - 30px)">
+      <div  class="body">
+        <div class="head-body">¡Siempre listos para atenderte!</div>
+        <mat-card class="bn-card" style="background-color: rgb(238, 238, 236);">
+          <mat-card-header>
+            <mat-card-title class="titulo">Contrucción</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="../../../assets/images/martillo.png" alt="">
+          <mat-card-content class="linea">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eos sed ullam expedita. Consequuntur, ducimus. Officiis, nisi? Nam non ad ipsa minus similique optio officiis quo! Eligendi eum natus doloribus.</p>
+          </mat-card-content>
+        </mat-card> 
+        <mat-card class="bn-card" style="background-color: rgb(218, 218, 217);">
+          <mat-card-header>
+            <mat-card-title class="titulo">Reparación</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="../../../assets/images/llaveinglesa.png" alt="">
+          <mat-card-content class="linea">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eos sed ullam expedita. Consequuntur, ducimus. Officiis, nisi? Nam non ad ipsa minus similique optio officiis quo! Eligendi eum natus doloribus.</p>
+          </mat-card-content>
+        </mat-card> 
+        <mat-card class="bn-card" style="background-color: rgb(181, 181, 178);">
+          <mat-card-header>
+            <mat-card-title class="titulo">Mantenimiento</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="../../../assets/images/llaveallen.png" alt="">
+          <mat-card-content class="linea">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eos sed ullam expedita. Consequuntur, ducimus. Officiis, nisi? Nam non ad ipsa minus similique optio officiis quo! Eligendi eum natus doloribus.</p>
+          </mat-card-content>
+        </mat-card> 
+      </div>
+    </div>
+    <div fxflex="calc(30% - 30px)">
+      <div class="registro">
+        <label for="" style="margin-left: 20px; width: 80%; color: #FFF">Regístrate y obten 15% de descuento en tu primer atención.</label>
+        <div class="col-md-12">
+          <label for="" style="color: #FFF;">Nombre</label>
+          <input class="form-control form-group" type="text">
+        </div>
+        <div class="col-md-12">
+          <label for="" style="color: #FFF;">Celular</label>
+          <input class="form-control form-group" type="text">
+        </div>
+        <div class="col-md-12">
+          <label for="" style="color: #FFF;">E-Mail</label>
+          <input class="form-control form-group" type="text">
+        </div>
+        <div class="col-md-12">
+          <label for="" style="color: #FFF;">Dirección</label>
+          <input class="form-control form-group" type="text">
+        </div>
+        <div class="col-md-12">
+          <label for="" style="color: #FFF;">En que podemos ayudarte</label>
+          <textarea class="form-control form-group" name="" id="" cols="50" rows="2"></textarea>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center" class="col-md-12">
+          <button type="button" class="btn btn-primary">ENVIAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div fxLayout="row" class="body">
-  <app-quienes-somos *ngIf="quienesSomos"></app-quienes-somos>
-  <app-catalogo-material *ngIf="catalogo"></app-catalogo-material>
-  <app-nuestro-servicio *ngIf="servicio"></app-nuestro-servicio>
-  <app-emergencia *ngIf="emergencia"></app-emergencia>
-</div>
-<div class="before-footer">
-  Plomeros | Electricistas | Albañiles | Carpinteros | Pintores | Mecánicos
-</div>
-<div class="footer">
-  <img class="img" src="../../../assets/images/contactanos.jpg" alt="">
-  <img class="img" src="../../../assets/images/telefono.jpg" alt="">
-  <img class="img" src="../../../assets/images/correo.jpg" alt="">
-  <img class="img" src="../../../assets/images/direccion.jpg" alt="">
-  <img class="img" src="../../../assets/images/compartirweb.jpg" alt="">
+<div class="row footer">
+  <div class="col-md-3">
+    <strong style="color: rgb(0, 124, 195);">Síguenos en las redes</strong><br>
+    <strong>@elfontanero</strong><br>
+    <span>Facebook</span><br>
+    <span>Twitter</span><br>
+    <span>YouTube</span><br>
+    <span>Instagram</span><br>
+  </div>
+  <div class="col-md-3">
+    <strong style="color: rgb(0, 124, 195);">Contratar servicios</strong><br>
+    <strong>CONSTRUCCIÓN</strong><br>
+    <strong>REPARACIÓN</strong><br>
+    <strong>MANTENIMIENTO</strong><br>
+  </div>
+  <div class="col-md-3">
+    <strong style="color: rgb(0, 124, 195);">Únete a nuestro equipo</strong><br>
+    <strong>Enviar cirriculum vitae</strong><br><br>
+    <strong style="color: rgb(0, 124, 195);">Contáctanos</strong><br>
+    <span>987654321</span><br>
+    <span>elbenfontanero@gmail.com</span><br>
+  </div>
   <img class="descarga" mat-card-image src="../../../assets/images/descargaapp.png" alt="">
 </div>

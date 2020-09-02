@@ -30,36 +30,19 @@ export class ExploreComponent implements OnInit {
     console.log("YOUTUBE");
   }
 
-  onClickQS(){
-    this.servicio = false;
-    this.catalogo = false;
-    this.emergencia = false;
-    this.quienesSomos = true;
-  }
-
   onClickCatalogo(){
-    this.servicio = false;
-    this.quienesSomos = false;
-    this.emergencia = false;
-    this.catalogo = true;
+    
   }
 
   onClickServicio(){
-    this.quienesSomos = false;
-    this.catalogo = false;
-    this.emergencia = false;
-    this.servicio = true;
+    
   }
 
   onClickEmergencia(){
-    this.quienesSomos = false;
-    this.catalogo = false;
-    this.servicio = false;
-    this.emergencia = true
+
   }
 
   onClickIngresar(){
-    this.casco = false;
-    this.cotizacion = true;
+    
   }
 }
