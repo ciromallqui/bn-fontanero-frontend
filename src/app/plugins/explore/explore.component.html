@@ -6,10 +6,28 @@
       <div><img src="../../../assets/images/pibli.jpg" alt=""></div>
     </mat-toolbar-row>
     <mat-toolbar-row class="menu">
-      <mat-icon>play_arrow</mat-icon><span style="cursor: pointer;">Conócenos</span>
-      <mat-icon>play_arrow</mat-icon><span style="cursor: pointer;">Misión</span>
-      <mat-icon>play_arrow</mat-icon><span style="cursor: pointer;">Visión</span>
-      <mat-icon>play_arrow</mat-icon><span style="cursor: pointer;">Valores</span>
+      <ul class="nav">
+        <li><a href="#"><mat-icon style="float: left;">play_arrow</mat-icon>Conócens</a>
+          <ul>
+            <li>The menu exposes an API to open/close programmatically. Please <br>note that in this case, an matMenuTriggerFor directive is still <br>necessary to attach the menu to a trigger element in the DOM.</li>
+          </ul>
+        </li>
+        <li><a href="#"><mat-icon style="float: left;">play_arrow</mat-icon>Misión</a>
+          <ul>
+            <li>The menu exposes an API to open/close programmatically. Please <br>note that in this case, an matMenuTriggerFor directive is still <br>necessary to attach the menu to a trigger element in the DOM.</li>
+          </ul>
+        </li>
+        <li><a href="#"><mat-icon style="float: left;">play_arrow</mat-icon>Visión</a>
+          <ul>
+            <li>The menu exposes an API to open/close programmatically. Please <br>note that in this case, an matMenuTriggerFor directive is still <br>necessary to attach the menu to a trigger element in the DOM.</li>
+          </ul>
+        </li>
+        <li><a href="#"><mat-icon style="float: left;">play_arrow</mat-icon>Valores</a>
+          <ul>
+            <li>The menu exposes an API to open/close programmatically. Please <br>note that in this case, an matMenuTriggerFor directive is still <br>necessary to attach the menu to a trigger element in the DOM.</li>
+          </ul>
+        </li>
+      </ul>
       <span class="spacer"></span>
       <mat-icon>play_arrow</mat-icon><span  style="cursor: pointer;" (click)="onClickCatalogo()">Catálogo de Materiales</span>
       <img style="width: 220px; margin-left: 40px;" src="../../../assets/images/barraseguridad.png" alt="">
@@ -21,15 +39,17 @@
     <div fxFlex="50%">
       <strong class="servicio">NUESTROS SERVICIOS</strong>
     </div>
-    <div fxFlex="120px">
+    <!-- <div fxFlex="120px">
       <img mat-card-image class="caja" src="../../../assets/images/cajaherramientas.png" alt="">
-    </div>
+    </div> -->
 
     <div fxFlex="50%">
       <div fxLayout="row" fxLayoutAlign="end center">
         <mat-card class="emergencia">
           <img mat-card-image (click)="onClickEmergencia()" src="../../../assets/images/emergencias.png" alt="">
           <mat-card-content>
+            <p>Atención de emergencias</p>
+            <!-- <a href="#">Revisar condiciones</a> -->
           </mat-card-content>
         </mat-card> 
       </div>
@@ -102,23 +122,34 @@
   <div class="col-md-3">
     <strong style="color: rgb(0, 124, 195);">Síguenos en las redes</strong><br>
     <strong>@elfontanero</strong><br>
-    <span>Facebook</span><br>
-    <span>Twitter</span><br>
-    <span>YouTube</span><br>
-    <span>Instagram</span><br>
+    <span style="cursor: pointer;" (click)="facebook()">Facebook</span><br>
+    <span style="cursor: pointer;" (click)="twitter()">Twitter</span><br>
+    <span style="cursor: pointer;" (click)="youtube()">YouTube</span><br>
+    <span style="cursor: pointer;" (click)="instagram()">Instagram</span><br>
   </div>
   <div class="col-md-3">
     <strong style="color: rgb(0, 124, 195);">Contratar servicios</strong><br>
     <strong>CONSTRUCCIÓN</strong><br>
     <strong>REPARACIÓN</strong><br>
-    <strong>MANTENIMIENTO</strong><br>
+    <strong>MANTENIMIENTO</strong><br><br>
+
+    <span>Plomeros</span><br>
+    <span>Electricistas</span><br>
+    <span>Albañiles</span><br>
+    <span>Carpinteros</span><br>
+    <span>Pintores</span><br>
+    <span>Mas servicios</span><br>
   </div>
   <div class="col-md-3">
-    <strong style="color: rgb(0, 124, 195);">Únete a nuestro equipo</strong><br>
+    <strong style="color: rgb(0, 124, 195); cursor: pointer;" (click)="onClickUnete()">Únete a nuestro equipo</strong><br>
     <strong>Enviar cirriculum vitae</strong><br><br>
     <strong style="color: rgb(0, 124, 195);">Contáctanos</strong><br>
     <span>987654321</span><br>
     <span>elbenfontanero@gmail.com</span><br>
+    <span (click)="onCLickDireccion()" style="cursor: pointer;">Cl. Jardines 321 Belen Huaraz</span><br>
+    <span>Compartir página web</span><br>
+    <span>Horario de oficina: 8:00 am - 5:00 pm</span><br>
+    <span (click)="onClickReclamo()" style="cursor: pointer; font-weight: bold;">LIBRO DE RECLAMACIONES</span>
   </div>
   <img class="descarga" mat-card-image src="../../../assets/images/descargaapp.png" alt="">
 </div>

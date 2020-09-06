@@ -8,9 +8,15 @@
     height: calc(100% - 160px);
 }
 .emergencia{
-    width: 160px;
+    width: 200px;
     margin-top: 20px;
     margin-right: 150px;
+    text-align: center;
+}
+.emergencia p{
+    font-size: 13px;
+    color: #FFF;
+    font-weight: bold;
 }
 .servicio{
     color: rgb(28, 130, 233);
@@ -44,6 +50,8 @@ body{
     background-color: rgb(238, 238, 236);
     position: fixed;
     height: 270px;
+    overflow: hidden;
+    z-index: 1000;
 }
 .spacer {
     flex: 1 1 auto;
@@ -63,6 +71,7 @@ body{
     position: absolute;
     margin-top: 50px;
     margin-left: calc(50% - 150px) ;
+    z-index: 1000;
 }
 .menu{
     width: 100%;
@@ -121,6 +130,7 @@ body{
     padding-left: 20px;
     background-color: rgb(238, 238, 236);
     z-index: 1000;
+    overflow: auto;
 }
 .footer .descarga{
     position: fixed;
@@ -154,4 +164,39 @@ body{
     background-color: rgb(70, 171, 226);
     margin-right: 10px;
     padding-bottom: 10px;
+}
+
+.nav > li {
+    float:left;
+}
+
+.nav li a {
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    /* min-width:140px; */
+}
+
+.nav li:hover > ul {
+    display:block;
+    list-style: none;
+}
+
+.nav li ul li {
+    position:fixed;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.898);
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 20px;
 }
